@@ -6,8 +6,8 @@ import (
 	"github.com/victorcel/pruebasGolan/uc"
 )
 
-func providerMessage() models.Message {
-	return models.NewMessage()
+func providerMessage(phrase string) models.Message {
+	return models.NewMessage(phrase)
 }
 
 func providerGreeter(message models.Message) repositories.Greeter {

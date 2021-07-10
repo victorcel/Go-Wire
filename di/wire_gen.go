@@ -11,8 +11,8 @@ import (
 
 // Injectors from wire.go:
 
-func Initialize() (uc.Event, error) {
-	message := providerMessage()
+func Initialize(phrase string) (uc.Event, error) {
+	message := providerMessage(phrase)
 	greeter := providerGreeter(message)
 	event, err := providerEvent(greeter)
 	if err != nil {
