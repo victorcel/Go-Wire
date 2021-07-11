@@ -7,11 +7,7 @@ import (
 	"github.com/victorcel/pruebasGolan/uc"
 )
 
-func Initialize()  (uc.Event, error) {
-	wire.Build(
-	providerEvent,
-	providerMessage,
-	providerGreeter,
-	)
+func Initialize(phrase string) (uc.Event, error) {
+	wire.Build( stdSet)
 	return uc.Event{}, nil
 }
