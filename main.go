@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	e, err := di.Initialize()
+	e, err := di.Initialize("Todo Ok")
 	if err != nil {
 		fmt.Printf("failed to create event: %s\n", err)
 		os.Exit(2)

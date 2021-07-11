@@ -12,7 +12,7 @@ import (
 // Injectors from wire.go:
 
 func Initialize(phrase string) (uc.Event, error) {
-	message := providerMessage(phrase)
+	message, _ := providerMessage(phrase)
 	greeter := providerGreeter(message)
 	event, err := providerEvent(greeter)
 	if err != nil {
